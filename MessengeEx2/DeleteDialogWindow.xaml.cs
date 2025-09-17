@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +22,10 @@ public partial class DeleteDialogWindow : Window
     public DeleteDialogWindow()
     {
         InitializeComponent();
+        WeakReferenceMessenger.Default.Register<CloseDialogMessage>(this, (r, m) =>
+        {
+            DialogResult = m.Value; // 모달 ShowDialog()에 값 전달
+            this.Close();
+        });
     }
 }

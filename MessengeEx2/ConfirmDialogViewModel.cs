@@ -11,10 +11,17 @@ namespace MessengeEx2;
 public partial class ConfirmDialogViewModel : ObservableObject
 {
     [RelayCommand]
-    private void Ok() =>
+    private void Ok()
+    {
         WeakReferenceMessenger.Default.Send(new ConfirmResultMessage(true));
+        WeakReferenceMessenger.Default.Send(new CloseDialogMessage(true));
+    }
 
     [RelayCommand]
-    private void Cancel() =>
+    private void Cancel()
+    {
         WeakReferenceMessenger.Default.Send(new ConfirmResultMessage(false));
+        WeakReferenceMessenger.Default.Send(new CloseDialogMessage(false));
+    }
+        
 }
