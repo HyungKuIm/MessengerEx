@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36301.6 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerEx1", "MessengerEx1\MessengerEx1.csproj", "{D0F5D526-9932-4691-8FC0-3B3CB775CDFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengeEx2", "MessengeEx2\MessengeEx2.csproj", "{BA5C4E14-9556-4F36-8850-41719BA5154C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D0F5D526-9932-4691-8FC0-3B3CB775CDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F5D526-9932-4691-8FC0-3B3CB775CDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0F5D526-9932-4691-8FC0-3B3CB775CDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5C4E14-9556-4F36-8850-41719BA5154C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5C4E14-9556-4F36-8850-41719BA5154C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5C4E14-9556-4F36-8850-41719BA5154C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5C4E14-9556-4F36-8850-41719BA5154C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
