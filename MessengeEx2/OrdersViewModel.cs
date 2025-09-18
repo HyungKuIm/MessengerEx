@@ -24,10 +24,14 @@ public partial class OrdersViewModel : ObservableObject
         _windows = windows;
     }
 
+    [ObservableProperty]
+    private string _deleteMsg;
+
     private void DeleteOrder()
     {
         // 삭제 로직
         Debug.WriteLine("삭제되었습니다.");
+        DeleteMsg = "삭제되었습니다";
     }
 
     [RelayCommand]

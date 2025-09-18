@@ -9,6 +9,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Content="주문 삭제" Width="200" Command="{Binding OpenDeleteCommand}"/>
+            <TextBlock Text="{Binding DeleteMsg}" />
         </StackPanel>
     </Grid>
 </Window>
