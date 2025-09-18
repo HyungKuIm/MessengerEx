@@ -22,10 +22,31 @@ public partial class DeleteDialogWindow : Window
     public DeleteDialogWindow()
     {
         InitializeComponent();
-        WeakReferenceMessenger.Default.Register<CloseDialogMessage>(this, (r, m) =>
+
+        Loaded += (_, _) =>
         {
-            DialogResult = m.Value; // 모달 ShowDialog()에 값 전달
-            this.Close();
-        });
+            //if (IsLoaded && IsVisible)
+            //{
+                WeakReferenceMessenger.Default.Register<CloseDialogMessage>(this, (r, m) =>
+                {
+                    DialogResult = m.Value; // 모달 ShowDialog()에 값 전달
+                    this.Close();
+                });
+            //}
+            
+        };
+
+        Closed += (_, _) => WeakReferenceMessenger.Default.UnregisterAll(this);
+
+        //WeakReferenceMessenger.Default.Register<CloseDialogMessage>(this, (r, m) =>
+        //{
+        //    DialogResult = m.Value; // 모달 ShowDialog()에 값 전달
+        //    this.Close();
+        //});
+        //vm.CloseAction = () =>
+        //{
+        //    DialogResult = true; this.Close();
+
+        //};
     }
 }
